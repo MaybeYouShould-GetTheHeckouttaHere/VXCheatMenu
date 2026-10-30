@@ -1,0 +1,13 @@
+LIBRARY WINHTTP.dll
+EXPORTS
+WinHttpOpen@20
+WinHttpSetTimeouts@20
+WinHttpCrackUrl@16
+WinHttpConnect@16
+WinHttpOpenRequest@28
+WinHttpSendRequest@28
+WinHttpReceiveResponse@8
+WinHttpQueryHeaders@24
+WinHttpQueryDataAvailable@8
+WinHttpReadData@16
+WinHttpCloseHandle@4

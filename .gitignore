@@ -1,0 +1,9 @@
+__pycache__/
+cheat/original_path.rb
+.validation/
+native/*-x86.a
+cheat/original_scripts.rvdata2
+cheat/archive-backup.bin
+/dist/
+cheat-settings/
+*.log
