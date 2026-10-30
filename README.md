@@ -2,7 +2,7 @@
 
 Version **0.3.0**. A modular Windows RGSS3 port of the supplied MV/MZ cheat menus,
 with mouse controls and a compact dark overlay drawn at desktop resolution.
-Its 700Ã—400 logical layout uses the source menu's 200px sidebar, panel names, inline fields,
+Its 700x400 logical layout uses the source menu's 200px sidebar, panel names, inline fields,
 sliders, searchable tables, five-row pagination, and hover opacity.
 
 Targets **RPG Maker VX Ace / RGSS3**, including encrypted `Game.rgss3a` games.
@@ -76,12 +76,12 @@ bindings; Backspace clears an optional binding and Esc cancels capture.
 The default renderer draws a separate, DPI-aware Windows layer at physical screen
 resolution. It does not enlarge the game's framebuffer, change `Graphics.width`
 or `Graphics.height`, or scale an RGSS text bitmap along with the game.
-At a 1920Ã—1080 client size and 100% display scaling, the default card is 810Ã—463.
-At 200% scaling on a 3840Ã—2160 display, it uses 1620Ã—926 physical pixels for the same
+At a 1920x1080 client size and 100% display scaling, the default card is 810x463.
+At 200% scaling on a 3840x2160 display, it uses 1620x926 physical pixels for the same
 visual size. Short clients also constrain card height. Small windowed games try to
 dock the card beside the game, preserving the game view.
 
-- **Settings â†’ Appearance â†’ UI Size** changes the footprint (default 90%).
+- **Settings -> Appearance -> UI Size** changes the footprint (default 90%).
 - **Text Size** changes text separately (default 115%); it does not enlarge the card.
 - **Ctrl+mouse wheel** over the native card changes its size.
 - Drag the panel header to move the card. Size/text choices persist in settings.
@@ -96,8 +96,8 @@ painting still occur only on changes; cursor motion does not repaint the card.
 
 ## Functionality
 
-- **General:** no clip, gold, movement speed 1â€“10 in 0.5 steps, Fixed speed,
-  game speed 0.1â€“10 in 0.1 steps with All/Battle scope, and title/save/load actions.
+- **General:** no clip, gold, movement speed 1-10 in 0.5 steps, Fixed speed,
+  game speed 0.1-10 in 0.1 steps with All/Battle scope, and title/save/load actions.
 - **Shortcuts:** editable bindings, restore defaults, quick-save/load slot
   parameters, speed parameter, and held message-skip acceleration.
 - **HP/MP/Battle:** random encounter suppression, force encounter/victory/defeat/
