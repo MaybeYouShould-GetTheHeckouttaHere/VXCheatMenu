@@ -62,3 +62,5 @@ backups. It does not undo changes you saved to your game progress.
 More detail: [compatibility](docs/compatibility.md),
 [backups and saved settings](docs/backups-and-settings.md),
 [development](docs/development.md).
+
+Licensed under the [MIT License](LICENSE).

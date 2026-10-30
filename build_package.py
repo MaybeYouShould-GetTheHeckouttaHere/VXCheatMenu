@@ -5,7 +5,7 @@ from build import build
 
 
 RUNTIME_FILES = (
-    'Install.cmd', 'Install.ps1', 'Uninstall.cmd',
+    'Install.cmd', 'Install.ps1', 'Uninstall.cmd', 'LICENSE',
     'cheat/ArchivePatch.cs', 'cheat/bootstrap.rvdata2',
     'cheat/core.rb', 'cheat/display.rb', 'cheat/input.dll',
     'cheat/input.rb', 'cheat/storage.rb', 'cheat/translate.rb', 'cheat/ui.rb',
