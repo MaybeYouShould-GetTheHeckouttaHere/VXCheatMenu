@@ -1,5 +1,8 @@
 # VX Ace Cheat Menu Improved
 
+Based on [RPG Maker MV/MZ Cheat UI Plugin](https://github.com/paramonos/RPG-Maker-MV-MZ-Cheat-UI-Plugin) by **paramonos**.
+This VX Ace adaptation follows the original menu's functionality, UI, and default controls.
+
 A mouse-driven cheat menu for **RPG Maker VX Ace games on Windows**. Edit your
 party, inventory, and game settings without opening the RPG Maker editor.
 RPG Maker XP, original VX, MV, and MZ games are not supported by this package.
