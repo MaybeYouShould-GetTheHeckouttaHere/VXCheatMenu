@@ -1,7 +1,15 @@
-"""Package the installable payload and source; exclude local settings and validators."""
+"""Build the install-only release ZIP using an explicit runtime allowlist."""
 from pathlib import Path
 from zipfile import ZipFile, ZIP_DEFLATED
 from build import build
+
+
+RUNTIME_FILES = (
+    'Install.cmd', 'Install.ps1', 'Uninstall.cmd',
+    'cheat/ArchivePatch.cs', 'cheat/bootstrap.rvdata2',
+    'cheat/core.rb', 'cheat/display.rb', 'cheat/input.dll',
+    'cheat/input.rb', 'cheat/storage.rb', 'cheat/translate.rb', 'cheat/ui.rb',
+)
 
 
 def package():
@@ -9,16 +17,16 @@ def package():
     root = Path(__file__).resolve().parent
     destination = root / 'dist' / 'VXAceCheatMenuImproved.zip'
     destination.parent.mkdir(exist_ok=True)
+    files = [root / name for name in RUNTIME_FILES]
+    files.extend(sorted((root / 'cheat/panels').glob('*.rb')))
+    if not any(path.parent.name == 'panels' for path in files):
+        raise RuntimeError('No menu panels found')
+    for path in files:
+        if not path.is_file():
+            raise FileNotFoundError(path)
     with ZipFile(destination, 'w', ZIP_DEFLATED) as archive:
-        for path in sorted(root.rglob('*')):
-            if not path.is_file():
-                continue
-            relative = path.relative_to(root)
-            if any(part in ('.validation', '__pycache__', 'cheat-settings', 'dist', '.git') for part in relative.parts):
-                continue
-            if path.name in ('original_path.rb', 'original_scripts.rvdata2', 'archive-backup.bin', '.gitignore') or path.name.endswith('-x86.a'):
-                continue
-            archive.write(path, relative)
+        for path in files:
+            archive.write(path, path.relative_to(root))
     print(destination)
 
 

@@ -10,7 +10,7 @@ RPG Maker XP, original VX, MV, and MZ games are not supported by this package.
 
 ## Install
 
-1. [Download the ZIP](https://github.com/MaybeYouShould-GetTheHeckouttaHere/VXCheatMenu/archive/refs/heads/main.zip) and extract it.
+1. [Download the ZIP](https://github.com/MaybeYouShould-GetTheHeckouttaHere/VXCheatMenu/releases/latest/download/VXAceCheatMenuImproved.zip) and extract it.
 2. Close your game.
 3. Copy the **`cheat` folder**, **`Install.ps1`**, **`Install.cmd`**, and
    **`Uninstall.cmd`** into the game folder, beside **`Game.exe`** and **`Game.ini`**.
